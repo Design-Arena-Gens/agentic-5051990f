@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --accent: #2563eb;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-black antialiased;
+}
+
+/* Swiss design: strict rhythm, generous whitespace */
+.h1 { @apply text-4xl font-medium tracking-tight; }
+.h2 { @apply text-2xl font-medium tracking-tight; }
+.h3 { @apply text-lg font-medium tracking-tight; }
+.p  { @apply text-sm leading-relaxed text-iris-gray700; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.card {
+  @apply border border-iris-gray200 bg-white; 
+}
+
+.button-primary {
+  @apply bg-iris-blue text-white px-4 py-2 uppercase tracking-wide text-xs; 
+}
+
+.table th { @apply text-left text-xs uppercase tracking-wider text-iris-gray600 border-b border-iris-gray200 py-2; }
+.table td { @apply text-sm text-iris-gray800 border-b border-iris-gray100 py-3; }
